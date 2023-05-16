@@ -1,6 +1,5 @@
 """Functions for implementing the rule of the classic arcade game Pac-Man."""
 
-
 def eat_ghost(power_pellet_active, touching_ghost):
 
     """Verify that Pac-Man can eat a ghost if he is empowered by a power pellet.
@@ -56,10 +55,19 @@ def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
     # else: 
         # return False
     
-    if has_eaten_all_dots:
+    # if has_eaten_all_dots:
+        # return True
+    # elif power_pellet_active and not touching_ghost:
+        # return True 
+    # else: 
+        # return False
+
+
+    if has_eaten_all_dots and power_pellet_active and touching_ghost:
         return True
-    elif power_pellet_active and not touching_ghost:
-        return True 
+    
+    elif has_eaten_all_dots == True and touching_ghost == False:
+        return True
+
     else: 
         return False
-
