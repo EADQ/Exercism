@@ -51,7 +51,23 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     :param denomination: int - the value of a single bill.
     :return: int - maximum value you can get.
     """
+    percentage_calculus = spread/100
+    actual_exchange_rate = exchange_rate + percentage_calculus
+    exchange_total = budget * actual_exchange_rate
+    # currency_denomination = int(exchange_total) / denomination
+    return exchange_total
+
+    # percentage_calculus = exchange_rate * spread
+    # actual_exchange_rate = exchange_rate + percentage_calculus
+    # exchange_total = budget/actual_exchange_rate
+    # currency_denomination = exchange_total * denomination
+    # return currency_denomination
+
+test = exchangeable_value(100000, 10.61, 10, 1)
+print(test)
 
 
 
-    pass
+
+
+
